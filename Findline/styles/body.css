@@ -1,0 +1,73 @@
+body {
+  margin: 0; /* Remove default margin */
+  font-family: 'Arial', sans-serif; /* Clean and modern font */
+  background-color: #f4f4f4; /* Light gray background for the body */
+  color: #333; /* Dark gray text color for better readability */
+  line-height: 1.5; /* Improved line height for better readability */
+}
+
+/* Container for the columns */
+.columns-container {
+  display: flex; /* Use flexbox for layout */
+  height: calc(100vh - 150px); /* Adjust height (total height minus header and footer space) */
+  gap: 10px; /* Gap between columns */
+}
+
+/* Left Column (1 part) */
+.column-left {
+  flex: 1; /* 1 part of the total 4 parts */
+  padding: 10px; /* Optional padding */
+  background-color: #e0f7fa; /* Light blue background for left column */
+  border-right: 2px solid #ccc; /* Optional border to separate columns */
+  overflow: auto; /* Allow scrolling if content exceeds height */
+}
+
+/* Right Column (3 parts) */
+.column-right {
+  flex: 3; /* 3 parts of the total 4 parts */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Gap between rows */
+}
+
+/* Top Right Column (1/8) */
+.top-right-column {
+  flex: 1; /* Occupies 1/8 of the right column height */
+  padding: 10px; /* Optional padding */
+  background-color: #ffe0b2; /* Light orange background for top right column */
+}
+
+/* Bottom Right Column (7/8) */
+.bottom-right-column {
+  flex: 7; /* Occupies 7/8 of the right column height */
+  padding: 10px; /* Optional padding */
+  background-color: #ffccbc; /* Different light orange background for bottom right column */
+}
+
+/* Date, Weather, and Time Section */
+.date-weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333; /* Dark Gray Text */
+  padding: 0; /* Removed padding for a snug fit */
+  margin: 0; /* Removed margin */
+  font-family: 'Arial', sans-serif; /* Clean and simple font */
+}
+
+.date-display, .time-display, .weather-display {
+  font-size: 1em; /* Set font size to a consistent small size */
+  margin: 0; /* Removed margin for a snug fit */
+  text-align: center; /* Center align text */
+}
+
+/* Footer styling */
+footer {
+  height: 50px; /* Fixed height for footer */
+  background-color: #333; /* Dark background for footer */
+  color: white; /* White text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Positioning for footer */
+}

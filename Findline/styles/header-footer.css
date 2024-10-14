@@ -1,0 +1,57 @@
+header {
+  background-color: #14213d;
+  color: #fca311;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fca311;
+  margin: 0 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #eae2b7;
+}
+
+/* General Body Styling to Keep Footer at Bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header stays on top */
+header {
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: #14213d;
+  color: #fca311;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  border-top: 5px solid #fca311;
+  flex-shrink: 0;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Second Page style.css">
+
+    <link rel="icon" type="image/jpg" href="Assets/1.png">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Select a Department</title>
+</head>
+<body>
+
+        
+   
+    <nav>
+        <h1 class="ror">Select a College/Department</h1>
+        
+        
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+
+        <div class="links-container">
+
+          <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </label>
+    
+          <h1 class="ulo">Select a College/Department<br> <span class="nah">(Click arrow to select a Department)</span></h1>
+           
+          <a href="index.html">Home</a>
+          <a href="Dr. Sangalang Hall.html">Dr. Sangalang Hall</a>
+          <a href="Dr. Marcos Hall.html">Dr. Marcos Hall</a>
+          <a href="Capt. Padilla Hall.html">Capt. Padilla Hall</a>
+          <a href="Other Facilities.html">Other Facilities</a>
+          <a href="regform.html" target="_blank">Survey Form</a>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('SHS.png')">
+                <div class="content">
+                    <h1>Senior High School Department</h1>
+                    <p><br></p>
+                    <a href="SHS.html" class="line"><span>Explore</span></a>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('COME.png')">
+                <div class="content">
+                    <h1>College of Maritime Education</h1>
+                    <p><br></p>
+                    <a href="COME.html" class="line"><span>Explore</span></a>
+                </div>
+            </div> 
+            <div class="slides" style="--img: url('COCJE.png')">
+                <div class="content">
+                    <h1>College of Criminal Justice Education</h1>
+                    <p><br></p>
+                    <a href="COCJE.html" class="line"><span>Explore</span></a>
+                </div>
+            </div> 
+            <div class="slides" style="--img: url('COED.png')">
+                <div class="content">
+                    <h1>College of Education</h1>
+                    <p><br></p>
+                    <a href="COED.html" class="line"><span>Explore</span></a>
+                
+                </div>
+            </div> 
+            <div class="slides" style="--img: url('CTM.png')">
+                <div class="content">
+                    <h1>College of Tourism Management</h1>
+                    <p><br></p>
+                    <a href="COTM.html" class="line"><span>Explore</span></a>
+                </div>
+            </div> 
+            <div class="slides" style="--img: url('COIS.png')">
+                <div class="content">
+                    <h1>College of Information System</h1>
+                    <p><br></p>
+                    <a href="COIS.html" class="line"><span>Explore</span></a>
+                </div>
+            </div> 
+            <div class="slides" style="--img: url('CBA.png')">
+                <div class="content">
+                    <h1>College of Business Administration</h1>
+                    <p><br></p>
+                    <a href="CBA.html" class="line"><span>Explore</span></a>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('NUrsing.jpg')">
+                <div class="content">
+                    <h1>College of Nursing</h1>
+                    <p><br></p>
+                    <a href="nursing.html" class="line"><span>Explore</span></a>
+                </div>
+            </div>
+            
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span></div>
+            </div>
+<script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click', function(){
+        let slides = document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click', function(){
+        let slides = document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length - 1]);
+    })
+</script>
+</body>
+</html>

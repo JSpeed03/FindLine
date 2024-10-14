@@ -1,0 +1,16 @@
+.date-weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333; /* Dark Gray Text */
+  padding: 0; /* Removed padding for a snug fit */
+  margin: 0; /* Removed margin */
+  font-family: 'Arial', sans-serif; /* Clean and simple font */
+}
+
+.date-display, .time-display, .weather-display {
+  font-size: 1em; /* Set font size to a consistent small size */
+  margin: 0; /* Removed margin for a snug fit */
+  text-align: center; /* Center align text */
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="icon" type="image/jpg" href="Assets/1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Exact Colleges Of Asia</title>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <img src="Assets/1.png" class="logo">
+            <p>Welcome to</p>
+            <h1>Exact Colleges Of Asia</h1>
+            <a href="Second Page.html">
+            <button class="butones"><span>Take a tour</span></button></a>
+
+            <button class="butones1" onclick="showPopup()"><span> Tutorial</span></button>
+
+
+            <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+
+          
+            <div class="popup" id="popup">
+                <span class="close-button" onclick="hidePopup()">X</span>
+                <h2 class="tutor">Tutorial</h2>
+                <div id="tutorial-content">
+    
+                </div>
+                <button class="nav-button" onclick="prevPage()" id="prev-button" disabled>Previous</button>
+                <button class="nav-button" onclick="nextPage()" id="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            const tutorialPages = [
+                `<img src="Assets/TUtorial/1.png" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/2.png" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/3.png" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/4.png" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/5.png" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/6.jpg" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/7.jpg" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/8.jpg" class="tutor-img" ">`,
+                `<img src="Assets/TUtorial/9.png" class="tutor-img" ">`
+            ];
+
+        let currentPage = 0;
+    
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            displayPage();
+        }
+    
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    
+        function displayPage() {
+            document.getElementById('tutorial-content').innerHTML = tutorialPages[currentPage];
+            document.getElementById('prev-button').disabled = currentPage === 0;
+            document.getElementById('next-button').disabled = currentPage === tutorialPages.length - 1;
+        }
+    
+        function prevPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                displayPage();
+            }
+        }
+    
+        function nextPage() {
+            if (currentPage < tutorialPages.length - 1) {
+                currentPage++;
+                displayPage();
+            }
+        }
+
+         // Set the inactivity timeout in milliseconds
+  const inactivityTimeout = 500; // 5 minutes Pre Adjust mo nalang 5s naka set to.......................................................................................................
+
+// Set the inactivity timer
+let inactivityTimer = setTimeout(() => {
+  // Redirect to the index page
+  window.location.href = './../../../Findline';
+}, inactivityTimeout);
+
+// Reset the inactivity timer on user activity
+document.addEventListener('mousemove', () => {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(() => {
+    window.location.href = './../../../Findline';
+  }, inactivityTimeout);
+});
+
+document.addEventListener('keypress', () => {
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(() => {
+    window.location.href = './../../../Findline';
+  }, inactivityTimeout);
+});
+    </script>
+    
+
+
+
+</body>
+</html>
