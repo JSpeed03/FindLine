@@ -71,3 +71,134 @@ footer {
   justify-content: center;
   position: relative; /* Positioning for footer */
 }
+
+/* pagenation */
+
+.bottom-right-column {
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+.pagination-controls {
+  position: absolute; /* Fixes the buttons at the bottom */
+  bottom: 10px; /* Space from the bottom */
+  left: 50%; /* Center the buttons */
+  transform: translateX(-50%); /* Adjust centering */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  background-color: #14213d;
+  color: #fca311;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: #fca311;
+  color: #14213d;
+}
+
+.column-left h2 {
+  text-align: center;
+  color: #14213d; /* Dark color for the header */
+}
+
+#announcement-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+#announcement-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Light border for separation */
+  color: #333; /* Dark text color */
+  transition: background-color 0.3s;
+}
+
+#announcement-list li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* announcement */
+
+.column-left {
+  padding: 10px; /* Padding for the left column */
+  background-color: #e0f7fa; /* Light blue background */
+  height: calc(100vh - 150px); /* Full height minus header/footer */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+.announcement-controls {
+  display: flex;
+  margin-bottom: 10px; /* Space below controls */
+}
+
+#new-announcement {
+  flex: 1; /* Input field takes up available space */
+  padding: 5px; /* Padding for input */
+  margin-right: 5px; /* Space between input and button */
+  font-size: 0.9em; /* Slightly smaller font */
+}
+
+.announcement-controls button {
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: #14213d; /* Dark background */
+  color: #fca311; /* Light text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9em; /* Slightly smaller font */
+}
+
+#announcement-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+#announcement-list li {
+  padding: 5px; /* Padding for each announcement */
+  border-bottom: 1px solid #ccc; /* Light border */
+  display: flex; /* Flexbox for button alignment */
+  justify-content: space-between; /* Space between text and buttons */
+}
+
+#announcement-list button {
+  background-color: transparent; /* Transparent button background */
+  color: #14213d; /* Dark text for buttons */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.8em; /* Smaller font for buttons */
+}
+
+/* icon */
+
+.icon-container {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  margin-left: 10px; /* Margin for the icon container */
+}
+
+.icon-container i {
+  cursor: pointer; /* Show pointer on hover */
+  font-size: 1.2em; /* Size of the icons */
+  color: #333; /* Color for the icons */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.icon-container i:hover {
+  color: #fca311; /* Change color on hover */
+}
+
+.announcement-controls {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between input and buttons */
+}
+
+.announcement-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
