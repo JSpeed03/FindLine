@@ -1,2 +1,0 @@
-during single transaction next is functional
-but when transaction is enrollment next function only like end

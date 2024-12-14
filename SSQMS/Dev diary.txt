@@ -1,0 +1,4 @@
+during single transaction next is functional
+but when transaction is enrollment next function only like end
+
+enrollment function ommited ny changing transaction id 17 to 16
